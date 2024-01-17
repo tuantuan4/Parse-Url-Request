@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: parseUrl
+Version: 0.0.1
+Summary: parseUrl url request
+Home-page: https://github.com/pypa/sampleproject
+Author: tuanla-i2023
+Author-email: leanhtuan200222@gmail.com
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Parse url request with parameter as page, pageSize, order_by, filter

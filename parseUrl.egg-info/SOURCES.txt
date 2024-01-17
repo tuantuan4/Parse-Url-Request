@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+parseUrl/__init__.py
+parseUrl/parse.py
+parseUrl/test.py
+parseUrl/test_filter.py
+parseUrl.egg-info/PKG-INFO
+parseUrl.egg-info/SOURCES.txt
+parseUrl.egg-info/dependency_links.txt
+parseUrl.egg-info/top_level.txt
+tests/__init__.py
+tests/test_sly.py
