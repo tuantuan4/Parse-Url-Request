@@ -177,8 +177,8 @@ def split_url(data):
 
     return p.page, p.page_size, p.order_by, p.filter
 
-
-if __name__ == '__main__':
-    data = '/api/resources?page=1&page_size=10?order_by=name desc, hireDate asc?filter=(priority eq 1 or city eq `Redmond`) and (price gt 100 or price gt 200) not (price le 3.5)'
-
-    print(split_url(data=data))
+#
+# if __name__ == '__main__':
+#     data = '/api/resources?page=1&page_size=10?order_by=name desc, hireDate asc?filter=(priority eq 1 or city eq `Redmond`) and (price gt 100 or price gt 200) not (price le 3.5)'
+#
+#     print(split_url(data=data))
