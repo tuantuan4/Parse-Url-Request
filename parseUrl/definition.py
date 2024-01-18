@@ -1,0 +1,15 @@
+"""
+Operator in sqlalchemy
+"""
+OPERATOR_EQUAL = '=='
+OPERATOR_NOT_EQUAL = '!='
+OPERATOR_GREATER_THAN = '>'
+OPERATOR_GREATER_THAN_OR_EQUAL = '>='
+OPERATOR_LESS_THAN = '<'
+OPERATOR_LESS_THAN_OR_EQUAL = '<='
+"""
+Logical Operators in sqlalchemy
+"""
+LOGICAL_OPERATOR_AND = 'and_'
+LOGICAL_OPERATOR_OR = 'or_'
+LOGICAL_OPERATOR_NOT = 'not_'
