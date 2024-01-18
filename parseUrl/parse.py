@@ -2,6 +2,10 @@ import re
 
 from sly import Lexer, Parser
 
+from parseUrl.definition import OPERATOR_EQUAL, OPERATOR_NOT_EQUAL, OPERATOR_GREATER_THAN, \
+    OPERATOR_GREATER_THAN_OR_EQUAL, OPERATOR_LESS_THAN, OPERATOR_LESS_THAN_OR_EQUAL, LOGICAL_OPERATOR_AND, \
+    LOGICAL_OPERATOR_OR, LOGICAL_OPERATOR_NOT
+
 """url_example
     /api/v1/people?page=1&page_size=10&order_by=name desc, hireDate asc&filter=name eq makai'
     EQUAL = r'eq', =
@@ -104,6 +108,7 @@ def format_sort(sort_list):
 
 
 def parse_condition_to_mysql(query_string):
+
     pattern = re.compile(r'\((.*?)\)')
     matches = pattern.findall(query_string)
     for match in matches:
@@ -177,8 +182,9 @@ def split_url(data):
 
     return p.page, p.page_size, p.order_by, p.filter
 
-#
-# if __name__ == '__main__':
-#     data = '/api/resources?page=1&page_size=10?order_by=name desc, hireDate asc?filter=(priority eq 1 or city eq `Redmond`) and (price gt 100 or price gt 200) not (price le 3.5)'
-#
-#     print(split_url(data=data))
+
+if __name__ == '__main__':
+    data = '/api/resources?page=1&page_size=10?order_by=name desc, hireDate asc?filter=(priority eq 1 or city eq `Redmond`) and (price gt 100 or price gt 200) not (price le 3.5)'
+
+    print(split_url(data=data))
+

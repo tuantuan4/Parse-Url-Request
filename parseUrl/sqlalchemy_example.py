@@ -45,4 +45,6 @@ def convert_to_sqlalchemy(conditions):
             i += 1
 
     print(result)
-print(convert_to_sqlalchemy(conditions=conditions))
+
+
+convert_to_sqlalchemy(conditions=conditions)
