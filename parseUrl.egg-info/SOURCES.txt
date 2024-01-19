@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+parseUrl/__init__.py
+parseUrl/definition.py
+parseUrl/parse.py
+parseUrl/sqlalchemy_syntax.py
+parseUrl.egg-info/PKG-INFO
+parseUrl.egg-info/SOURCES.txt
+parseUrl.egg-info/dependency_links.txt
+parseUrl.egg-info/top_level.txt
+tests/test_parse.py
