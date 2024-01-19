@@ -8,11 +8,8 @@ def data_url():
 
 
 def test_split_url_request(data_url):
-    page, page_size, order_by, filter = split_url(data=data_url)
-    assert page == '1'
-    assert page_size == '10'
+    filter = split_url(data=data_url)
 
-    assert order_by == {'name': 'desc', 'hireDate': 'asc'}
     assert filter == ['(priority eq 1 or city eq `Redmond`)', 'and', '(price gt 100 or price gt 200)', 'not',
                       'price le 3.5']
 

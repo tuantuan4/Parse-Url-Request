@@ -2,9 +2,7 @@ import re
 
 from sly import Lexer, Parser
 
-from parseUrl.definition import OPERATOR_EQUAL, OPERATOR_NOT_EQUAL, OPERATOR_GREATER_THAN, \
-    OPERATOR_GREATER_THAN_OR_EQUAL, OPERATOR_LESS_THAN, OPERATOR_LESS_THAN_OR_EQUAL, LOGICAL_OPERATOR_AND, \
-    LOGICAL_OPERATOR_OR, LOGICAL_OPERATOR_NOT
+
 from parseUrl.sqlalchemy_syntax import replace_comparison_operators, convert_to_sqlalchemy
 
 """url_example
@@ -188,3 +186,9 @@ def parse_url_request(data_url):
     conditions = [replace_comparison_operators(condition) for condition in conditions]
 
     return convert_to_sqlalchemy(conditions=conditions)
+
+
+# if __name__ == '__main__':
+#     data = '/api/resources?page=1&page_size=10?order_by=name desc, hireDate asc?filter=(priority eq 1 or city eq `Redmond`) and (price gt 100 or price gt 200) not (price le 3.5)'
+#
+#     print(parse_url_request(data_url=data))
